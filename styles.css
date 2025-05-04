@@ -1,0 +1,120 @@
+/* Import Google Font similar to Dekho style */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    background: linear-gradient(-45deg, #ff6a00, #ee0979, #ff6a00, #ff6a00);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #222;
+  }
+  
+  /* Snowfall Layer */
+  .snowfall {
+    background-image: url('https://www.transparenttextures.com/patterns/snow.png');
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+    animation: snowfall 30s linear infinite;
+    opacity: 0.4;
+  }
+  
+  /* Sparkle Animation Layer */
+  .sparkle {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-radial-gradient(circle, rgba(255,255,255,0.2) 0px, transparent 4px);
+    background-size: 50px 50px;
+    animation: sparkleAnim 3s linear infinite;
+    z-index: 1;
+  }
+  
+  /* Main Container */
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 420px;
+    margin: 80px auto;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+  }
+  
+  /* Input Group */
+  .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+  
+  /* Button Styling */
+  button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #ff6a00;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #e65c00;
+  }
+  
+  /* Result Text */
+  #result {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #222;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 40px;
+    font-size: 15px;
+    color: #444;
+  }
+  
+  /* Animations */
+  @keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @keyframes snowfall {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+  }
+  
+  @keyframes sparkleAnim {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 50px; }
+  }
+  
